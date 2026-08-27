@@ -71,9 +71,9 @@ LIMIT 5;
 -- Clause: A component of a SQL statement that performs a specific role.
 -- Alias (AS): A temporary name given to a column or table in the result set using `AS`.
 
--- Query: 
+-- Query: A SQL statement that retrieves or modifies data.
 
--- Clause: 
+-- Clause: A section of a SQL query with a specific purpose.
 
--- Alias (AS):
+-- Alias (AS): A temporary name for a column or table.
 
