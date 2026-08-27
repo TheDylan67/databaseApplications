@@ -13,7 +13,7 @@
 -- 1. Show every team in Ohio or California, with its state.
 SELECT full_name
 FROM teams
-
+ORDER BY year_founded DESC
 -- 2. Show teams founded between 1960 and 1980, with their founding
 --    years. Use BETWEEN.
 
