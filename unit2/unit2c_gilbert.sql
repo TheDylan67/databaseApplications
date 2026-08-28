@@ -29,16 +29,20 @@ FROM teams;
 -- 4. From player_season_stats: show player_id, gp, pts, and points
 --    per game (pts / gp). Only include players with more than 0 games.
 
-SELECT
+SELECT player_id, gp, pts, pts / gp AS points_per_game
 FROM player_season_stats
+WHERE gp > 0;
 
 
 -- 5. Same as query 4, but round points per game to one decimal place.
-
+SELECT player_id, gp, pts, ROUND(pts / gp, 1) AS points_per_game
+FROM player_season_stats
+WHERE gp  > 0;
 
 -- 6. From team_game_stats: show each distinct season and just its
 --    starting year — "2021-22" becomes "2021". Use SUBSTR.
-
+SELECT player_id
+FROM player_season_stats
 
 -- =====================================================================
 -- CHECK YOUR WORK
