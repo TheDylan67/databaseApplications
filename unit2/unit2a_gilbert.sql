@@ -10,7 +10,7 @@
 --
 -- Read unit2a_Walkthrough.md first. Stuck on syntax? See unit2_StudyGuide.md.
 -- =====================================================================
-
+ll
 
 -- 1. List every team's full name.
 SELECT full_name
