@@ -32,6 +32,7 @@ from teams;
 
 -- 6. What is the total number of points scored across every game in
 --    the database?
+test....
 
 
 -- =====================================================================
