@@ -32,7 +32,9 @@ from teams;
 
 -- 6. What is the total number of points scored across every game in
 --    the database?
-test....
+
+    select SUM(pts) AS total_points
+    from team_game_stats;
 
 
 -- =====================================================================
@@ -49,4 +51,5 @@ test....
 -- VOCABULARY — your words, not the reference sheet's
 -- =====================================================================
 
--- Aggregate function:
+-- Aggregate function: A function that operates on a set of values      
+ such as COUNT(), SUM(), AVG(), MIN(), or MAX().
