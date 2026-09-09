@@ -67,5 +67,4 @@ HAVING COUNT(*) > 200;
 
 -- GROUP BY:
 
-
 -- HAVING:
