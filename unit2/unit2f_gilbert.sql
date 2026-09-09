@@ -12,29 +12,60 @@
 
 
 -- 1. Show every movie's title alongside its average rating.
-SELECT
--- making changes
+
+SELECT   m.title, r.avg_rating, r.num_votes
+FROM     movies m
+JOIN     ratings r ON r.movie_id = m.movie_id
+ORDER BY r.num_votes DESC
+LIMIT    10;
+
+
 
 -- 2. Show the ten most-voted movies: title, average rating, and
 --    number of votes.
-
+SELECT   m.title, r.avg_rating, r.num_votes
+FROM     movies m
+JOIN     ratings r ON r.movie_id = m.movie_id
+ORDER BY r.num_votes DESC
+LIMIT    10;
 
 -- 3. Show movies rated above 8.5: title, release year, and rating,
 --    highest rated first.
+SELECT   m.title, m.release_year, r.avg_rating
+FROM     movies m
+JOIN     ratings r ON r.movie_id = m.movie_id
+WHERE    r.avg_rating > 8.5
+ORDER BY r.avg_rating DESC;
+
+
 
 
 -- 4. Show the game date, team name, and points for the first 20 rows
 --    of team_game_stats.
 
+SELECT   season, ROUND(AVG(pts), 1) AS avg_pts
+FROM     team_game_stats
+GROUP BY season
+ORDER BY season;
 
 -- 5. Show the ten highest-scoring player seasons: player name,
 --    season, and points.
-
+SELECT  p.player_name, ps.season, ps.points
+FROM player_season_stats ps
+INNER JOIN players p ON ps.player_id = p.player_id
+ORDER BY ps.points DESC
+LIMIT 10;
 
 -- 6. For the 2024-25 season, show the ten highest-scoring players
 --    with their name, their team's name, and their points.
 --    (Three tables.)
-
+SELECT   p.full_name, t.full_name AS team, s.pts
+FROM     player_season_stats s
+JOIN     players p ON p.player_id = s.player_id
+JOIN     teams   t ON t.team_id   = s.team_id
+WHERE    s.season = '2024-25'
+ORDER BY s.pts DESC
+LIMIT   10
 
 -- =====================================================================
 -- CHECK YOUR WORK
