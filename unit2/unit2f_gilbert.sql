@@ -13,6 +13,7 @@
 
 -- 1. Show every movie's title alongside its average rating.
 SELECT
+-- making changes
 
 -- 2. Show the ten most-voted movies: title, average rating, and
 --    number of votes.
