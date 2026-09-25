@@ -17,25 +17,27 @@ Use the **Execute SQL** tab. You know enough SQL from Unit 2 for all of these. P
 **a.** How many rows are in `games_flat`?
 
 ```sql
-
+SELECT COUNT(*) FROM games_flat;
 ```
 
 **Answer:**
-
+260
 
 **b.** How many rows have `home_city = 'Chicago'`? How many have `away_city = 'Chicago'`?
 
 ```sql
+SELECT COUNT(*) AS home_count FROM games_flat WHERE home_city = 'Chicago';
+SELECT COUNT(*) AS away_count FROM games_flat WHERE away_city = 'Chicago';
 
 ```
 
 **Answer:**
-
+18
 
 **c.** So how many times is the fact any team "plays in Chicago, Illinois" typed into this table?
 
 **Answer:**
-
+18
 
 ## 2. Find the mistakes
 
