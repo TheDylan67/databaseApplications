@@ -50,7 +50,7 @@ The designer chooses what hpappens when the foreign key is set up. Two common ch
 **d.** Pick either many-to-many row. Relational databases can't store a many-to-many directly. What table do you add, and what columns does it need?
 
 **Answer:**
-
+one to many 
 
 **e.** Not every database uses tables and keys. In a **graph** database (like the one behind Instagram's follow list), the same "who follows whom" relationship is stored as what two things? In a **key-value** store, how is a relationship handled?
 
